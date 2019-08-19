@@ -1,0 +1,13 @@
+
+<div class="summary" style="border: 2px solid blue; display: flex; padding: 5px;">
+  <div style="flex-flow: column nowrap; flex: 1;">
+  <p style="color: blue;">Summary Component: I show the data as it's updated in my parent, the Wrapper</p>
+  <p>Name: {{personData.name}} </p>
+  <p>Contact: {{personData.phone}} </p>
+  </div>
+  <div style="flex: 1; text-align: center; align-self: center;">
+  <button matButton type="button" (click)="submitButtonClick.emit($event)"
+                [disabled]="!areAllFormsValid" >Submit</button>
+  <p style="color: blue;">This button only enables when all the forms in my sibling, the tabs component, are valid.</p>
+  </div>
+</div>
