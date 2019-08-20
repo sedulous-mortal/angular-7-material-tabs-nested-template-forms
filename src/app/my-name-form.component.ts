@@ -12,5 +12,5 @@ import { FormGroup } from '@angular/forms';
 })
 export class NameFormComponent  {
   @Input() name: string;
-  @ViewChild('nameForm') nameForm: FormGroup;
+  @ViewChild('nameForm', {static: true}) nameForm: FormGroup;
 }
