@@ -19,6 +19,6 @@ export class NameFormComponent implements OnChanges {
   private nameForm: TemplateRef<any>;
 
   ngOnChanges(changes: SimpleChanges){
-    console.log(this.nameForm)
+    console.log(this.name, this.nameForm)
   }
 }
