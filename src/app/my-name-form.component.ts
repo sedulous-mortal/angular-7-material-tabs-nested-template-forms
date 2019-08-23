@@ -1,4 +1,4 @@
-import { Component, Input, ViewChild } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges, ViewChild } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 
 @Component({
@@ -10,7 +10,11 @@ import { FormGroup } from '@angular/forms';
     </mat-form-field>
 `,
 })
-export class NameFormComponent  {
+export class NameFormComponent implements OnChanges {
   @Input() name: string;
   @ViewChild('nameForm', {static: true}) nameForm: FormGroup;
+
+  ngOnChanges(changes: SimpleChanges){
+    console.log(changes)
+  }
 }
